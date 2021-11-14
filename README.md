@@ -15,7 +15,7 @@ I have created this repository purposely to add short notes on some of the thing
 - [Digital Corpora](https://digitalcorpora.org/corpora/network-packet-dumps)
 
 ## Malware Samples
--
+- [theZoo](https://github.com/ytisf/theZoo)
 
 ## Digital Forensics Tool Testing Images
 - [dftt](http://dftt.sourceforge.net/)
