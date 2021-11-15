@@ -16,7 +16,12 @@ I have created this repository purposely to add short notes on some of the thing
 
 ## Malware Samples
 - [theZoo](https://github.com/ytisf/theZoo)
-
+- [contagiodump](http://contagiodump.blogspot.com/)
+- [virusshare](https://virusshare.com/) _Registration Required_
+- [Hybrid analysis](https://www.hybrid-analysis.com/) _Registration Required_
+- [VirusBay](https://beta.virusbay.io/) _Registration Required_
+  #### Determining the file signatures of different file types based on their extension
+  - [File Signatures](https://filesignatures.net/)
 ## Digital Forensics Tool Testing Images
 - [dftt](http://dftt.sourceforge.net/)
 - [Computer Forensics Tool Testing Program (CFTT)](https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt)
