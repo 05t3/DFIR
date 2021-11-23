@@ -1194,11 +1194,12 @@ DeepBlueCLI also supports a variety of output methods. i.e JSON, HTML, CSV, etc 
 
 For example lets try generate a html report.
 
-![[Pasted image 20211123120536.png]]
+![image](https://user-images.githubusercontent.com/58165365/143047647-945edcaf-859f-46a8-a8de-f3e3c648d7a2.png)
 
 If we open the report on our browser, it would look as follows:
 
-![[Pasted image 20211123120713.png]]
+![image](https://user-images.githubusercontent.com/58165365/143047711-af5f1fce-9324-4c02-9ed1-44d2ed791a02.png)
+
 
 # Resources
 - [DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI)
