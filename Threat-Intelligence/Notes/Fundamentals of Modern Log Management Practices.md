@@ -189,3 +189,166 @@ After identifying the requirements for log collection, you must develop standard
 - You may also define non-mandatory requirements, which are other data sources that should be logged and analyzed if time and resources permit.
 - It would help if you also defined suggested recommendations for log generations, storage, transmission, analysis, disposal, and preservation of originals logs.
 - Finally, you must define roles and responsibilities for log management processes.
+
+
+# Log Management Challenges
+
+## Good Log Data - Quality and performance factors
+
+After identifying the requirements for log collection, you must develop standard processes to perform log management. 
+
+- First, you must find your organization's logging goals. Then, you must define mandatory security requirements for security, regulations, and laws.
+- You may also define non-mandatory requirements, which are other data sources that should be logged and analyzed if time and resources permit.
+- It would help if you also defined suggested recommendations for log generations, storage, transmission, analysis, disposal, and preservation of originals logs.
+- Finally, you must define roles and responsibilities for log management processes.
+
+## Centralized Log Collection
+
+![image](https://user-images.githubusercontent.com/58165365/147919620-bb7acd1c-10ac-48c8-af6f-4396e33260d8.png)
+
+So let's have a quick look at how we can define good log data. We can identify three criteria in defining the quality and performance factors of data provided by log management: 
+1- If there are missing logs or not, 
+2- If logs are relevant, and
+3- If the logs are delivered to SIEMs with no delay.
+
+If you look at these briefly, 
+- Firstly, the coverage should be comprehensive to ensure all required data from systems, security devices, and others are collected so that no critical events stay out of the SOC visibility.
+- It is also important not to inflate the logging infrastructure with data that does not add good enough context. This would create complexity, performance issues, storage shortage, and unnecessarily taking away from the event per second (EPS) license capacity.
+- Secondly, the level of detail logs contain is also very important. The SIEM may have received the log, but the event types and event attributes may be off to pinpoint an event. Or, conversely, logging maybe in the verbose level that contains unnecessary details. 
+- Thirdly, the timing of a log delivery is a crucial factor in detecting incidents early on. Infrastructural issues or policy configurations may delay the log delivery.
+
+So, to summarize, SIEM practitioners that are in charge of the log management needs to
+
+- make sure that they strike the right balance on the number of sources they collect logs from. 
+- logs should contain the required detail with no excess information, and
+- logs are to be delivered and collected with no delay.
+
+## Centralized Log Collection
+
+Now I'd like to talk about log management challenges about having good data. As you guessed, it is not easy, and many factors create challenges for Effective log management and make good data available continuously. 
+- Firstly, SIEMs need to collect logs from various data sources that may be located on-premises networks, collected in the data center, or in the cloud. Different platform characteristics and connectivity modes are prone to create log delivery and collection issues. 
+- As another challenge, due to network interruptions,API related issues, and software bugs, configuration errors, log delivery may have stopped altogether from a particular network segment or endpontsystem. For example, SOC teams may not be aware of it.
+- The last challenge is about the size of logs.Statistics are showing that in enterprise networks, log size can easily reach 10 terabytes each month. Collecting, storing, analyzing, and normalizing such big volumes also makes log management difficult.
+
+## Keeping up with changes
+
+Continuing with the challenges, another important dimension is related to keeping up with internal and external changes. 
+- At any time, a new machine, software, or network device can be turned on and start producing new log data, and it is not easily spotted the new log sources in the networks. 
+- Cloud instances can be launched for a few days or hours and then get shut down.
+
+So, SOC teams must be aware of architectural changes, new deployments, new applications, and retiring technologies to keep log management aligned with these changes that are handled by network operations, IT security, applications, teams, DevOps, and others. 
+
+Changes in the adversarial landscape can also create blind spots in networks. New attack vectors and attack techniques may require that some log sources, event types, and attributes excluded before are to be included going forward. 
+
+For example, attackers started obfuscating PowerShell commands to evade security controls and stay under the radar. Once this new TTP activity is identified, it has become necessary to collect logs from Windows Event ID 4104 to detect obfuscated PowerShell commands from now on. So logging should be updated to gain visibility on such new TTPs.
+
+## Normalization
+
+And finally, on the challenges, the log data is diverse. Systems, applications, and network devices each have their logs containing different types of data, but a single log source may contain multiple logs. Applications, for example, often have several log files, each containing a different form of data. 
+
+The contents of logs vary considerably.
+- Some logs are constructed to be read by humans, while others aren't; some use standard formats, while others use proprietary ones. 
+- Some log formats use commas to separate fields, others use spaces to separate fields within a single log message, and still, others use symbols or other character delimiters.  
+
+Even if two sources record the same values, they may have different representations. 
+- For example, a date may be formatted month month / day day / year year year year or day day / month month / year year year year. 
+- For a human reviewer, parsing dates in different formats might be easy but considering an FTP session being recorded by one log source as "POP3" and another as "110", the default port number of the POP3 protocol.
+
+So putting all these challenges together: the difficulty of collecting, keeping logs up-to-date, and normalizing a variety of formats tells us that things can quickly go wrong without SOC teams noticing and therefore validating the consistency of log infrastructure, coverage, adaptability needs to be part of the log management processes.
+
+## Log Security & Protection
+
+![image](https://user-images.githubusercontent.com/58165365/147920574-9e6e070f-24a2-479a-a5a4-b60806cb6b87.png)
+
+The last challenge that I want to  mention is Log Security and Protection.
+
+- First of all, you must ensure that the processes that produce log entries are secured. The integrity of log collectors, configuration files, and other components of log sources must be assured.
+- You also need to secure log data transfer by using secure mechanisms such as encryption. 
+- Confidentiality and integrity of log files in storage are also crucial. 
+-You are required to protect physical logging infrastructure and prevent unauthorized access.
+- Finally, you have to maintain business continuity.
+
+# Log Management Best Practice
+
+## Proactive Log Management
+
+So now, we come to the next point, which is proactive log management. This is where building at adapting proactive capabilities can help sharpen the knife for SOC teams 
+- to widen the log original sensible way, 
+- to spot and remove  irrelevant log sources to open up capacity, 
+- to identify new log sources against new TTPs with no delay, 
+- to identify shortcomings that can affect the flow of data.
+
+To gain capabilities for being proactive,our proposition is making the threat-centric validation part of log management processes. 
+
+![image](https://user-images.githubusercontent.com/58165365/147920768-437d7735-48cf-4e98-b772-d6961506b9a5.png)
+
+Suppose an attack simulation can provide a large set of threat samples, automation, and rich context about how the network response to the simulations. In that case, this insight can be used to pinpoint login gaps on SIEMs and opens up the road to fixing them.
+
+We come across quite often that log management involves a lot of assumptions; those assumptions mislead SIEM admins that logs are collected alright,  and they have the required details. In most cases, logging problems are identified after an incident takes place.
+
+![image](https://user-images.githubusercontent.com/58165365/147921158-0a1fac94-8cc6-43fa-9859-d10ac774e49d.png)
+
+## 1) Proactively Validate Log Status for a particular threat
+
+![image](https://user-images.githubusercontent.com/58165365/147920990-0f3d7907-ddee-43bb-a91d-5bff8da1bed1.png)
+
+So now, we will explore five best practices for proactive log management. In this last section of the course, I want to share with you five threat-centric validation best practices through which SIEM admins can identify the logging shortcomings themselves before an incident occurs.
+
+The first best practice is validating log status for a particular threat or an adversary group. It aims to help identify whether a SIEM platform has the required log visibility against a new TTP or TTPs. For example, a SOC analyst may want to check if the SIEM would receive logs related to Lazarus Group's latest attack campaign TTPs if an actual attack took place. 
+
+Suppose that an attack scenario of the Lazarus group contains 12 unique actions. It starts with system information discovery and continues with system network configuration discovery, system network connections discovery and goes all the way to C2 over HTTPS port 443. Using an integrated attack simulation platform, security analysts can safely replicate Lazarus Group's malicious actions, identify which of them are detected and missed, and mirror these findings to the SIEM platform to see whether everything matches or there are log visibility gaps that need addressing.
+We come across quite often that log management involves a lot of assumptions; those assumptions mislead SIEM admins that logs are collected alright,  and they have the required details. In most cases, logging problems are identified after an incident takes place.
+
+## 2) Look for detection opportunities in your security stack
+
+![image](https://user-images.githubusercontent.com/58165365/147921282-35d5770b-1a7a-4481-a9c3-5aa132768283.png)
+
+The second best practice is related to the detection capabilities of the security stack, which can be Network IPS, WAF, Firewall, endpoint protection, and other defense technologies. 
+
+In a scenario where a threat is not detected on the defense level, no logs are generated ,and the SOC teams have no way of knowing what type of malicious events that particular threat may be generating in the network.
+
+The best practice we suggest here is: 
+-as the first step, frequently or continuously simulate a comprehensive set of threats across the security stack
+- the second step is to identify detection gaps on the security stack based on these simulations. These first two steps reveal threat activities that security teams would not know if that threat is used in an actual attack.
+
+## 3) Look for detection opportunities in your security stack
+
+![image](https://user-images.githubusercontent.com/58165365/147921447-c8cd6da8-69fb-45d8-ab22-9a6c593c5560.png)
+
+For this best practice, simulate an attack first. If the simulation has not been detected, the log source of the TTP used in the simulation can be identified and enabled on the endpoint platform. 
+
+Here on the slide as an example, you can see that the recent Hafnium campaign targeting MS Exchange platforms can be detected if PowerShell Script Block Logging is enabled.
+
+## 4) Visualize to better understand, Manage, Communicate and cordinate
+
+![image](https://user-images.githubusercontent.com/58165365/147921533-a486e1cc-48ef-4a70-8332-8490a53510b8.png)
+
+The fourth best practice aims to put logging performance in a context, for example, the MITRE ATT&CK framework. 
+
+By identifying the MITRE ATT&CK techniques where no logs are received based on attack simulations, security teams can take corrective actions, identify gaps against the new threats or variance and monitor positive and negative log coverage changes.
+
+## 5) Proactively identify missing logs due to delivery, collection or configuration changes.
+
+![image](https://user-images.githubusercontent.com/58165365/147921646-070e5af4-bcc6-404d-a82d-a905ae2f8530.png)
+
+The last best practice aims at identifying and fixing log delivery and collection problems. 
+
+In this best practice, security controls detected or prevented an attack, generated logs, but due to configuration mistakes, network related delays, API limitations, changes made by the IT teams, and other possible reasons, the SIEM may not have received the log.
+
+![image](https://user-images.githubusercontent.com/58165365/147921882-acf421ea-8758-474f-92f7-d2a489facd4b.png)
+
+The best practice we suggest is to continually or frequently running attack simulations using an extensive threat sample database to address these types of infrastructural problems. Then, you can determine the delta between how security controls responded and what the SIEM has seen and establishing a regular validation process. 
+
+While previous use cases aim to optimize and widen logging coverage proactively, this best practice aims to keep this optimized login infrastructure up and running.
+
+## Threat centric Log validation with Picus
+
+![image](https://user-images.githubusercontent.com/58165365/147922030-20df43b8-30f8-4761-ab56-2c36a38d6fc2.png)
+
+Given the complexity of the log management function, SOC practitioners have to deal with all combinations of failures involving malfunctioning log sources, invalid log format, or temporary service disruption while adapting the scope of log collection to the changing adversarial landscape. 
+
+Besides many other features, Picus Security Control Validation Platform offers a threat-centric log validation process that allows SOC teams to proactively and consciously address these challenges by identifying: 
+- links between logging gaps and attack techniques
+- problems with originating or transferring logs
+- challenges in identifying log sources and level of verbose. 
+
