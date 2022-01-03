@@ -352,3 +352,42 @@ Besides many other features, Picus Security Control Validation Platform offers a
 - problems with originating or transferring logs
 - challenges in identifying log sources and level of verbose. 
 
+___________________
+
+# Quiz
+
+1. Which of the following options can be used to measure the log coverage against the known TTPs?
+
+`MITRE ATT&CK`
+
+2. Why should organizations manage logs?
+
+`All of the above`
+
+3. When implementing an SIEM solution and starting to aggregate logs, the configured data sources are only valid at the time it was configured. Application modifications, patching, and other upgrades change change the logs generated over time. What process is necessary to ensure logs are collected and processed in this manner?
+
+`Log validation`
+
+4. Suppose that you want to Identify whether  the SIEM platform has the required log visibility against a new Tactics, Techniques and Procedures  (TTP) of a threat group. Which of the following options best helps to identify visibility?
+
+`Attack simulation (simulating the new TTP)`
+
+5. In MITRE ATT&CK, there are about 60 listed data sources.  Which of the following data sources cover more MITRE ATT&CK techniques?
+
+`Process monitoring`
+
+6. In ______________, log data values are converted to a standardized format and labeled consistently.
+
+`Log Normalization`
+
+7. Which of the following options is NOT a property of a proactive log management?
+
+`Ignoring the logs from applications`
+
+8. It's best to start with this step when implementing a log management program:
+
+`Identifying your organization's log management and reporting needs`
+
+9. Suppose that the SIEM platform has not the required log visibility against a new Tactics, Techniques and Procedures  (TTP). Which of the following options can be a reason for this?
+
+`All of the above`
