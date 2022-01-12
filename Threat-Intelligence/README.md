@@ -1,0 +1,18 @@
+# Open Source Threat Hunting tools
+
+- [Zeek]( https://zeek.org)
+- [RITA](https://www.activecountermeasures.com/free-tools/rita/)
+- [Malleable-C2-Randomizer](https://github.com/bluscreenofjeff/Malleable-C2-Randomizer)
+- [tcpdump](https://www.tcpdump.org/)
+- [wireshark](https://www.wireshark.org/download.html)
+- [ngrep](https://github.com/jpr5/ngrep)
+- [datamash](https://www.gnu.org/software/datamash/)
+- [passer](https://www.activecountermeasures.com/free-tools/passer/)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
