@@ -120,4 +120,42 @@ If we now modify contents of the file, we should notice a change in the hash val
 
 # ACQUISITION METHODS
 
-//TO modify
+According to the used imaging tool method, the image file may contain only data from the suspect's machine, such as files and deleted files, slack space, and swap files, while other imaging tools allow you  to  add  extra  information  during  the  acquisition  process.  The  added  information  is  added  for documentation purposes, such as investigator name and case information.One approachof imaging the hard drive of the suspect’s computer is booting the computer with a speciallymodified  booting  disk  (CD,  DVD,  or  USB).  The  booting  disk  may  contain  a  modified distribution of Linux, a Windows version, or even DOS. This way, the computer will run the forensic disk to avoid using and modifying the internal hard drive of the computer. You can use a Linux live CD, the special thing in this approach is that it does not auto-mount media as  read/write.  After  booting  using  this  method,  you  can  use  any  method  to  copy  the  data  to  an attached  external  hard  drive.  This  method  will  provide  write  protection  for  the  evidence  drive(s) using software configurations. First,you need to modify the BIOS of the suspect’scomputer to boot the forensic mediainstead of the hard drive of the suspect system. However, you need to be careful in  using  the  booting  media,  since  it  carries  the  risk  of  accidentally  booting  the  hard  drive  in  the computer causing a modification of thousands of files on the evidence drive. There are several free forensic boot media online you can use or you can build and customize one according to your need, such as `Raptor`, `DEFT`, `CAINE`, `Windows FE`, and `Paladin`. To extract evidence from the target device, several methods are explained next.
+
+## LIVE VS STATIC ACQUISITION
+### LIVE ACQUISITION: 
+
+If  the  target  machine  is  powered  on  and  running,  the  acquisition  is  called  live  acquisition  (aka Online  Acquisition). The  liveacquisition  helps  to  collect  important  information,  such  as  memory contents, unencrypted data, passwords, and open network connections. This information can help us  to  determine  the  chronological  time  of  incidents  and  who  the  responsible  user  is.  In  live acquisition,  it  will  be  difficult  to  avoid  contamination,  since  the  tools  and  commands  you  will  use will change the time and date of file access, use DLLs or shared libraries, trigger malware,or even reboot the device. 
+
+### STATIC ACQUISITION:
+
+The  static  acquisition  (aka  dead  acquisition)  is  when  the  target  machine  is  powered  off.  In  such cases, you could remove the hard drive and connect it to a hardware write-blocker or boot it into a forensic OS. The write-blocker will prevent the modification of the hard drive since the device allows read-only  from  the  evidence  drive.  Examples  of  static  data  are  emails,  word  documents,  web activity,  spreadsheet,  slack  space,  swap  files,  unallocated  drive  space,and  deleted  files.  This acquisition  approach  serves  well  in  addressing  criminal  cases  such  as  child  exploitation  or  fraud cases,  in  which  image  files,  documents,and  spreadsheets  can  be  acquired  in  a  forensic  sound manner.
+
+### LOCAL VS REMOTE ACQUISITION
+
+The acquisition can also be local or remote. The local acquisition is when you have physical access to  the  investigated  system,  while  in  remote  acquisition,  you  will  need  network  tools  to  create connections for evidence acquisition.
+
+### PHYSICAL AND LOGICALACQUISITION
+
+This  method  depends  on  the  data  you  are  interested  in  and is divided intophysical  and  logical imaging.  The  physical  image  is  the  entire  hard  drive;  it  copies  all  zeroes  and  ones  on  the  drive. Hence,  a  physical  image  of a 1  TB  drive  will  generate  an  image  file  of  size  1  TB.  This  is  the  mostcommon  in  digital  forensic  and  it  is  important  in  case  you  suspect  that  the  evidence  has  been deleted or modified. The logical image is a part of the hard drive, a certain volume(s) of the drive. For example, if a hard drive contains the MBR with two partitions, D and E, the logical image would be data from E: drive or D: drive. This is very useful in case you are interested only inthe information contained in the drive. In some cases, you know what files you need for the investigation. In such a  case,  you  can  capture  a  targeted  image  that  contains  specific  files.  This  helps  to  decrease  the time and cost of the investigation.
+
+![image](https://user-images.githubusercontent.com/58165365/154365840-974ca731-18bf-419d-be6b-23b607f3d1dc.png)
+
+Bitstreamtools depend on the Cyclic Redundancy Check (CRC) to validate the imaging process
+
+# FORENSIC IMAGE FILE FORMAT
+
+Before knowing the tools, you need to know about the format of images that the tools may generate. A proprietary format is aformat whose specification is not publicly available. Some of these formats may be extensible, offering storage of arbitrary metadata besides the main evidence. A good feature of an image format is “seekablecompressed”, which means that the image can be searched without being entirely uncompressed. The imaging formats are divided into five main types, as seen in Table
+
+|Image Type|Description |
+|------|--------|
+|Raw Format|A bit-stream copy of data. Contains only data from the original volume, with no other information, such  as  headers,  metadata,  or  any  magic  values.However,  some  tools,  such  as  FTK,  generate  a separate file that contains imaging information. It allows writing a bit-stream data into files, fast data  transfer  can  be  configured  to  ignore  minor  read  errors  on the source  drive,  most  tools  can read  raw  format  and  you  can  write  your  script  to  analyze  the  file.  However,  it  requires  the  same storage as the original drive, which may be very large,and used tools may not capture bad sectors. Extensions include .raw, .dd, or .img format.|
+|Proprietary format|Provide  an  option  to  compress  or  split  image  files  and  can  include  metadata,  header,  and  footer besidethe  image  file.  However, the image  cannot  be  shared  between  different  tools  and  has limitations  on  the  file  size  for  each  segmented  volume.  Examples  of  extensions  include:  Encase image formats (E01 or EX01, SMART, and AD1) and AccessData image formats (.AD1)|
+|Advanced Forensic Framework (AFF)|Has a simple  design  with  extensibility,  allows  compression,  no  size  limitation  for  disk-to-image files,  provides  additional  space  for  metadata, open-sourceand  supports  multiple  platforms  and operating  systems,  and  has  internal  consistency  checks  for  self-authentication.  Extension  .aff, .afm for metadata and .adf for segmented image files.|
+|AFF4|In  comparison  to  AFF,  faster  acquisition  time  and fewer storage  requirements.  Also,  it  enables storage of disk-image data and support compression, signing, and encryption|
+|Generic Forensic   Zip (gzip)|Compressed  files  with  features  of randomlyaccessible  storage,  compression,  packed  storage, signed disk image, encryption, and allows to set flags to mark bad data sections.|
+
+
+
+However, if the format can be read by different tools, this will be better. For example, if an evidence image was created by Encase software, you can use other tools, such as `FTK` and `X-Ways`, to read this  image.  For  example,  if  you  are  using `Encase` imaging  tool,  acquired  images  will  be  saved  with an extension.The `E##` format, which will be numberedin sequential order, starting at `E01up` to `E99` (A  lettering  system  with `EAA` will  replace  the  numbers  after `E99`).    In  comparison  to the `dd` image file, an image created by `FTK` or `Encase` will contain both suspect’s data and information related to the case,such as case number, investigation name,and other information.
+
