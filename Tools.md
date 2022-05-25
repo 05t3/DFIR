@@ -4,6 +4,12 @@
 - [REMnux](https://docs.remnux.org/install-distro/get-virtual-appliance)
 - [Sentinel Labs](https://www.sentinelone.com/labs/building-a-custom-malware-analysis-lab-environment/)
 
+# Checking IP Reputation
+
+- [Cyren IP Reputation Check](https://www.cyren.com/security-center/cyren-ip-reputation-check-gate)
+- [Virus Total](https://www.virustotal.com/gui/home/search)
+- [Talos IP and Domain Reputation Center](https://talosintelligence.com/reputation_center/)
+
 # Tools
 
 If you wish to build you lab from scratch, you can install the following tools.
