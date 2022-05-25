@@ -6,6 +6,9 @@
 
 # Checking IP Reputation
 
+- [AbuseIPDB](https://www.abuseipdb.com/)
+- [urlscan.io](https://urlscan.io/)
+- [URLhaus Database](https://urlhaus.abuse.ch/browse/)
 - [Cyren IP Reputation Check](https://www.cyren.com/security-center/cyren-ip-reputation-check-gate)
 - [Virus Total](https://www.virustotal.com/gui/home/search)
 - [Talos IP and Domain Reputation Center](https://talosintelligence.com/reputation_center/)
