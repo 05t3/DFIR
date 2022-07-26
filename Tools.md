@@ -86,3 +86,56 @@ _RegRipper is a utility that takes a registry hive as input and outputs a report
 |KAPE|Kroll Artifact Parser/Extractor: Flexible, high speed collection of files as well as processing of files. Many many features|
 |TimeApp|A simple app that shows current time (local and UTC) and optionally, public IP address. Great for testing|
 |XWFIM|X-Ways Forensics installation manager|
+
+
+# Sysinternals
+
+## File and Disk Utilities
+
+_The tools can be found [here](https://docs.microsoft.com/en-us/sysinternals/downloads/file-and-disk-utilities)_
+
+|Tool|Description|
+|-----|-----|
+|AccessChk|This tool shows you the accesses the user or group you specify has to files, Registry keys or Windows services.|
+|AccessEnum|This simple yet powerful security tool shows you who has what access to directories, files and Registry keys on your systems. Use it to find holes in your permissions.|
+|CacheSet|CacheSet is a program that allows you to control the Cache Manager's working set size using functions provided by NT. It's compatible with all versions of NT.|
+|Contig|Wish you could quickly defragment your frequently used files? Use Contig to optimize individual files, or to create new files that are contiguous.|
+|Disk2vhd|Disk2vhd simplifies the migration of physical systems into virtual machines (p2v).|
+|DiskExt|Display volume disk-mappings.|
+|DiskMon|This utility captures all hard disk activity or acts like a software disk activity light in your system tray.|
+|DiskView|Graphical disk sector utility.|
+|Disk Usage (DU)|View disk usage by directory.|
+|EFSDump|View information for encrypted files.|
+|FindLinks|FindLinks reports the file index and any hard links (alternate file paths on the same volume) that exist for the specified file.  A file's data remains allocated so long as at it has at least one file name referencing it.|
+|Junction|Create Win2K NTFS symbolic links.|
+|LDMDump|Dump the contents of the Logical Disk Manager"s on-disk database, which describes the partitioning of Windows 2000 Dynamic disks.|
+|MoveFile|Schedule file rename and delete commands for the next reboot. This can be useful for cleaning stubborn or in-use malware files.|
+|NTFSInfo|Use NTFSInfo to see detailed information about NTFS volumes, including the size and location of the Master File Table (MFT) and MFT-zone, as well as the sizes of the NTFS meta-data files.|
+|PendMoves|See what files are scheduled for delete or rename the next time the system boots.|
+|Process Monitor|Monitor file system, Registry, process, thread and DLL activity in real-time.|
+|PsFile|See what files are opened remotely.|
+|PsTools|The PsTools suite includes command-line utilities for listing the processes running on local or remote computers, running processes remotely, rebooting computers, dumping event logs, and more.|
+|SDelete|Securely overwrite your sensitive files and cleanse your free space of previously deleted files using this DoD-compliant secure delete program.|
+|ShareEnum|Scan file shares on your network and view their security settings to close security holes.|
+|Sigcheck|Dump file version information and verify that images on your system are digitally signed.|
+|Streams|Reveal NTFS alternate streams.|
+|Sync|Flush cached data to disk.|
+|VolumeID|Set Volume ID of FAT or NTFS drives.|
+
+
+## Networking Utilities
+
+_The tools can be found [here](https://docs.microsoft.com/en-us/sysinternals/downloads/networking-utilities)_
+
+|Tool|Description|
+|-----|-----|
+|AD Explorer|Active Directory Explorer is an advanced Active Directory (AD) viewer and editor.|
+|AD Insight|AD Insight is an LDAP (Light-weight Directory Access Protocol) real-time monitoring tool aimed at troubleshooting Active Directory client applications.|
+|AdRestore|Undelete Server 2003 Active Directory objects.|
+|PipeList|Displays the named pipes on your system, including the number of maximum instances and active instances for each pipe.|
+|PsFile|See what files are opened remotely.|
+|PsPing|Measures network performance.|
+|PsTools|The PsTools suite includes command-line utilities for listing the processes running on local or remote computers, running processes remotely, rebooting computers, dumping event logs, and more.|
+|ShareEnum|Scan file shares on your network and view their security settings to close security holes.
+|TCPView|Active socket command-line viewer.|
+|Whois|See who owns an Internet address.|
