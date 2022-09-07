@@ -4,7 +4,7 @@
 - [REMnux](https://docs.remnux.org/install-distro/get-virtual-appliance)
 - [Sentinel Labs](https://www.sentinelone.com/labs/building-a-custom-malware-analysis-lab-environment/)
 
-# Checking IP Reputation
+# Checking IP/URL Reputation
 
 - [AbuseIPDB](https://www.abuseipdb.com/)
 - [urlscan.io](https://urlscan.io/)
@@ -12,6 +12,10 @@
 - [Cyren IP Reputation Check](https://www.cyren.com/security-center/cyren-ip-reputation-check-gate)
 - [Virus Total](https://www.virustotal.com/gui/home/search)
 - [Talos IP and Domain Reputation Center](https://talosintelligence.com/reputation_center/)
+- [Censys Search](https://search.censys.io/)
+- [GreyNoise](https://viz.greynoise.io)
+- [PhishTank](https://www.phishtank.com/)
+
 
 # Tools
 
@@ -35,7 +39,7 @@ _Autopsy gives you the option to acquire data from both live systems or from a d
 
 _FTK Imager is similar to Autopsy and allows you to extract files from a disk image or a live system by mounting the said disk image or drive in FTK Imager. Another way you can extract Registry files from FTK Imager is through the Obtain Protected Files option. This option is only available for live systems_
 
-# Tools to Exploring Windows Registry
+# Tools for Exploring Windows Registry
 
 - [AccessData's Registry Viewer](https://accessdata.com/product-download/registry-viewer-2-0-0)
 - [Zimmerman's Registry Explorer](https://ericzimmerman.github.io/#!index.md)
