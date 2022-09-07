@@ -39,6 +39,53 @@ _Autopsy gives you the option to acquire data from both live systems or from a d
 
 _FTK Imager is similar to Autopsy and allows you to extract files from a disk image or a live system by mounting the said disk image or drive in FTK Imager. Another way you can extract Registry files from FTK Imager is through the Obtain Protected Files option. This option is only available for live systems_
 
+- [SQLite viewer software](https://www.foxtonforensics.com/sqlite-database-examiner/)
+
+_Free tool for inspecting the contents of SQLite databases._
+
+  - Automatically load all SQLite databases from a folder or subfolders.
+  - Images stored within a database are automatically extracted and displayed within the built-in image gallery.
+  - Common file types stored within a database are automatically detected.
+  - BLOBs can be examined using the built-in hex viewer or exported to a file for further analysis.
+
+- [Windows File Analyzer](https://www.mitec.cz/wfa.html)
+
+_This application decodes and analyzes some special files used by Windows OS. In these files is interesting information for forensic analysis.
+Every analysis results can be printed in user-friendly form._
+
+Here are described individual analyzers:
+
+  - Windows XP Thumbnail Database Analyzer
+    
+    _This analyzer reads Thumbs.db file and displays its content with stored data include image preview._
+  - ACDSee Thumbnail Database Analyzer
+    
+    _This analyzer reads ACDSee *.fpt file and displays its content with stored data include image preview._
+  - Google Picasa Thumbnail Database Analyzer
+   
+   _This analyzer reads Picasa *.db file and displays its content with stored data include image preview._
+  - FastStone Viewer Thumbnail Database Analyzer
+    
+    _This analyzer reads fsviewer.db file and displays its content with stored data include image preview._
+  - HP Digital Imaging Thumbnail Database Analyzer
+    
+    _This analyzer reads *.db or *.dat file and displays its content with stored data include image preview._
+  - Prefetch Analyzer
+    
+    _It reads files stored usually in Prefetch folder and diggs out stored informaton._
+  - Shortcut Analyzer
+    
+    _This tool reads all shortcut files in specified folder and displays data stored in them._
+  - Index.DAT Analyzer
+    
+    _This analyzer reads specified Index.Dat file and displays its content. Index.Dat files store usually data of Internet Explorer cookies, temporary files or history._
+  - Recycle Bin Analyzer
+    
+    _This analyzer decodes and displays Info2 files that hold WinXP recycle bin content information or $I files holding Vista and above recycle bin information._ 
+
+  Here you can download [WFA Guidance by Allan S. Hay](https://www.mitec.cz/Downloads/WFA%20Guidance.pdf)
+
+
 # Tools for Exploring Windows Registry
 
 - [AccessData's Registry Viewer](https://accessdata.com/product-download/registry-viewer-2-0-0)
