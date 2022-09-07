@@ -26,7 +26,7 @@ If you wish to build you lab from scratch, you can install the following tools.
 - [CFF Explorer](https://ntcore.com/?page_id=388)
 
 
-# Registry Forensic Tools
+# Registry Forensic Acquisition Tools
 
 - [KAPE](https://www.kroll.com/en/insights/publications/cyber/kroll-artifact-parser-extractor-kape)
 
@@ -49,6 +49,27 @@ _Eric Zimmerman has developed a handful of tools that are very useful for perfor
 - [RegRipper](https://github.com/keydet89/RegRipper3.0)
 
 _RegRipper is a utility that takes a registry hive as input and outputs a report that extracts data from some of the forensically important keys and values in that hive. The output report is in a text file and shows all the results in sequential order.RegRipper is available in both a CLI and GUI form_
+
+
+# Browser Artifact Aquisition & Analysis Tools
+
+- Browser History Capturer
+
+_Browser History Capturer allows you to easily capture web browser history from a Windows computer. The tool can be run from a USB dongle or via a Remote Desktop connection to capture history from Chrome, Edge, Firefox and Internet Explorer web browsers._
+
+  [Download Here](https://www.foxtonforensics.com/browser-history-capturer/)
+
+- Browser History Viewer
+
+_Browser History Viewer (BHV) is a forensic software tool for extracting and viewing internet history from the main desktop web browsers while Identify peaks in internet activity using the interactive timeline, find relevant data faster with filtering by keywords and date/time range & Browse the images a user has viewed online using the built-in image gallery._
+
+  [Download Here](https://www.foxtonforensics.com/browser-history-viewer/)
+
+- Browser History Examiner (_Trial Version_)
+
+_Browser History Examiner (BHE) is a forensic software tool for capturing, analysing and reporting internet history from the main desktop web browsers._
+
+  [Download Here](https://www.foxtonforensics.com/browser-history-examiner/)
 
 
 # Eric Zimmerman's tools (Forensic tools)
